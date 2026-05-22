@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uta MEMOry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="site-title">Uta MEMOry</h1>
+  </header>
+
+  <main>
+    <form class="memo-form" id="memoForm">
+      <textarea id="memoInput" placeholder="メモを書いてください"></textarea>
+      <button type="submit">追加</button>
+    </form>
+
+    <p class="empty" id="emptyMessage">まだメモはありません。</p>
+    <ul class="memo-stack" id="memoStack"></ul>
+    </main>
+
+    <script>
+    const form = document.getElementById("memoForm");
+    const input = document.getElementById("memoInput");
+    const stack = document.getElementById("memoStack");
+    const emptyMessage = document.getElementById("emptyMessage");
+    const storageKey = "uta-memory-memos";
+
+    const memos = JSON.parse(localStorage.getItem(storageKey) || "[]");
+
+    function saveMemos() {
+        localStorage.setItem(storageKey, JSON.stringify(memos));
+    }
+
+    function renderMemos() {
+        stack.innerHTML = "";
+        emptyMessage.hidden = memos.length > 0;
+
+        memos.forEach((text, index) => {
+        const item = document.createElement("li");
+        item.className = "memo";
+
+        const memoText = document.createElement("span");
+        memoText.className = "memo-text";
+        memoText.textContent = text;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.className = "delete-button";
+        deleteButton.type = "button";
+        deleteButton.textContent = "削除";
+        deleteButton.addEventListener("click", () => {
+        memos.splice(index, 1);
+            saveMemos();
+            renderMemos();
+        });
+
+        item.appendChild(memoText);
+        item.appendChild(deleteButton);
+        stack.appendChild(item);
+        });
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const text = input.value.trim();
+        if (!text) return;
+
+        memos.unshift(text);
+        input.value = "";
+        saveMemos();
+        renderMemos();
+        input.focus();
+    });
+
+    renderMemos();
+    </script>
+</body>
+</html>
