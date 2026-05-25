@@ -24,7 +24,7 @@
     "react-dom": "^19.2.6"
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.3",
