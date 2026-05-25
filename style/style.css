@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "nonbit";
+  src: url("font/213chan_nonbit-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -22,8 +28,15 @@ header {
   font-weight: 700;
 }
 
+.site-title rt {
+  font-size: 0.4em;
+  letter-spacing: 0.2em;
+  padding-bottom: 1px;
+  font-family: "nonbit", serif;
+}
+
 main {
-  width: min(720px, calc(100% - 32px));
+  width: min(720px, 100% - 32px);
   margin: 32px auto;
 }
 
@@ -111,4 +124,4 @@ button:hover {
   margin: 18px 0 0;
   color: #6b7280;
   text-align: center;
-}
+}/*# sourceMappingURL=style.css.map */
