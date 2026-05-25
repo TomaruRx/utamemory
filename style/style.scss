@@ -23,11 +23,22 @@ header {
   background: #ffffff;
 }
 
+.title-icon {
+  width: 64px; 
+  height: 64px;
+  object-fit: contain;
+  vertical-align: middle;
+}
 .site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 0;
   font-size: 22px;
   font-weight: 700;
+  line-height: 1;
 }
+
 .site-title rt{
 font-size: 0.4em;
   letter-spacing: 0.2em;

@@ -5,6 +5,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <h1 className="site-title">
+          <img src="style/icon/favicon.ico" alt="logo" className="title-icon" />
           <ruby>
             Uta MEMOry <rt>ウタ メモリー</rt>
           </ruby>
