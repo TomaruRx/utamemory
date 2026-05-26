@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 server
-font
-icon
+# font
+# icon
 *.css.map

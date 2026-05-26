@@ -27,7 +27,6 @@
     "node": "24.x"
   },
   "devDependencies": {
-    "@rolldown/plugin-babel": "^0.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "vite": "^8.0.14"
   }

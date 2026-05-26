@@ -45,7 +45,7 @@ render() {
 
     return (
     <main>
-        <form class="memo-form" onSubmit={this.handleSubmit}>
+        <form className="memo-form" onSubmit={this.handleSubmit}>
             <textarea 
             placeholder="記録を書いてください"
             value={inputValue}
@@ -55,15 +55,15 @@ render() {
         </form>
 
         {memos.length === 0 && (
-            <p class="empty">まだ記録はありません。</p>
+            <p className="empty">まだ記録はありません。</p>
         )}
 
-        <ul class="memo-stack">
+        <ul className="memo-stack">
             {memos.map((text, index) => (
-            <li key={index} class="memo">
-                <span class="memo-text">{text}</span>
+            <li key={index} className="memo">
+                <span className="memo-text">{text}</span>
                 <button 
-                class="delete-button" 
+                className="delete-button" 
                 type="button"
                 onClick={() => this.handleDelete(index)}
                 >
