@@ -6,13 +6,17 @@ class Footer extends React.Component {
       <div className='footer'>
         <div className='footer-inner'>
           <div className='footer-logo'>
-            <p>Footer</p>
+            {/* <p>Footer</p> */}
           </div>
-          <ul className='footer-list'>
+          {/* <ul className='footer-list'>
             <li>1</li>
             <li>2</li>
             <li>3</li>
-          </ul>
+          </ul> */}
+        </div>
+        <div className='footer-bottom'></div>
+        <div className='footer-copyright'>
+          <p>app@2026</p>
         </div>
       </div>
     );
