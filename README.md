@@ -1,5 +1,5 @@
 # Uta MEMOry
-アクセスは[こちら](https://utamemory-dpo5-lm81r0xgv-tomaru-s-projects.vercel.app)から
+アクセスは[こちら](https://utamemory-dpo5-lm81r0xgv-tomaru-s-projects.vercel.app)から(未完成)
 
 ## 開発履歴
 
